@@ -1,0 +1,73 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color:#0D1637;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.button{
+    width: 180px;
+    height: 60px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(147, 148, 149);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+
+}
+.button:hover.button span{
+    color: #fff;
+}
+.button:hover{
+    box-shadow: 
+        0 0 10px lime,
+        0 0 40px lime,
+        0 0 80px lime;
+        background-color: lime;
+}
+.button::after{
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 40%;
+    background-color: lime;
+    animation-name: a1;
+    animation-duration: 1.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 2;
+}
+.button::before{
+    position: absolute;
+    content: '';
+    width: 175px;
+    height: 55px;
+    background-color: #0D1637;
+    z-index: 3;
+}
+.button:hover.button::before{
+    background-color: lime;
+}
+.button span{
+    position: absolute;
+    z-index: 4;
+}
+@keyframes a1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
