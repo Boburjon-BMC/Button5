@@ -61,7 +61,7 @@ body{
 }
 .button span{
     position: absolute;
-    z-index: 4;
+    z-index: 5;
 }
 @keyframes a1 {
     0%{
